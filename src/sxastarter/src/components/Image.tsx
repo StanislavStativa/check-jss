@@ -49,12 +49,12 @@ export const Banner = (props: ImageProps): JSX.Element => {
           .replace(`height="${props?.fields?.Image?.value?.height}"`, 'height="100%"'),
       }
     : {
-        ...props.fields.Image,
-        value: {
-          ...props.fields.Image.value,
-          style: { width: '100%', height: '100%' },
-        },
-      };
+      ...props.fields.Image,
+      value: {
+        ...props.fields.Image.value,
+        style: { width: '100%', height: '100%' },
+      },
+    };
 
   return (
     <div

@@ -2,18 +2,16 @@ import { useEffect } from 'react';
 import { GetServerSideProps } from 'next';
 import NotFound from 'src/NotFound';
 import Layout from 'src/Layout';
-import { SitecoreContext, ComponentPropsContext } from '@sitecore-jss/sitecore-jss-nextjs';
+import {
+  SitecoreContext,
+  ComponentPropsContext,
+  } from '@sitecore-jss/sitecore-jss-nextjs';
 import { handleEditorFastRefresh } from '@sitecore-jss/sitecore-jss-nextjs/utils';
 import { SitecorePageProps } from 'lib/page-props';
 import { sitecorePagePropsFactory } from 'lib/page-props-factory';
 import { componentBuilder } from 'temp/componentBuilder';
 
-const SitecorePage = ({
-  notFound,
-  componentProps,
-  layoutData,
-  headLinks,
-}: SitecorePageProps): JSX.Element => {
+const SitecorePage = ({ notFound, componentProps, layoutData, headLinks }: SitecorePageProps): JSX.Element => {
   useEffect(() => {
     // Since Sitecore editors do not support Fast Refresh, need to refresh editor chromes after Fast Refresh finished
     handleEditorFastRefresh();

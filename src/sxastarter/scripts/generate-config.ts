@@ -12,7 +12,8 @@ import { jssConfigFactory } from './config';
 const defaultConfig: JssConfig = {
   sitecoreApiKey: process.env[`${constantCase('sitecoreApiKey')}`],
   sitecoreApiHost: process.env[`${constantCase('sitecoreApiHost')}`],
-  sitecoreSiteName: process.env[`${constantCase('sitecoreSiteName')}`],
+  sitecoreSiteName:
+    process.env[`${constantCase('sitecoreSiteName')}`],
   graphQLEndpointPath: process.env[`${constantCase('graphQLEndpointPath')}`],
   defaultLanguage: process.env[`${constantCase('defaultLanguage')}`],
   graphQLEndpoint: process.env[`${constantCase('graphQLEndpoint')}`],
@@ -29,16 +30,16 @@ generateConfig(defaultConfig);
  */
 function generateConfig(defaultConfig: JssConfig): void {
   // Handle undefined values
-  Object.keys(defaultConfig).forEach((prop) => {
+  Object.keys(defaultConfig).forEach(prop => {
     defaultConfig[prop] = defaultConfig[prop] || '';
   }, {});
 
   jssConfigFactory
     .create(defaultConfig)
-    .then((config) => {
+    .then(config => {
       writeConfig(config);
     })
-    .catch((e) => {
+    .catch(e => {
       console.error('Error generating config');
       console.error(e);
       process.exit(1);
@@ -56,7 +57,7 @@ function writeConfig(config: JssConfig): void {
 const config = {};\n`;
 
   // Set configuration values, allowing override with environment variables
-  Object.keys(config).forEach((prop) => {
+  Object.keys(config).forEach(prop => {
     // Handle undefined values
     const value = config[prop] || '';
     configText += `config.${prop} = process.env.${constantCase(prop)} || '${value.trim()}';\n`;
