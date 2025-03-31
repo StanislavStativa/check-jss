@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { NativeDataFetcher, GraphQLSitemapXmlService } from '@sitecore-jss/sitecore-jss-nextjs'
+import { NativeDataFetcher, GraphQLSitemapXmlService } from '@sitecore-jss/sitecore-jss-nextjs';
 import { siteResolver } from 'lib/site-resolver';
 import config from 'temp/config';
 import clientFactory from 'lib/graphql-client-factory';
@@ -42,9 +42,6 @@ const sitemapApi = async (
       return res.redirect('/404');
     }
   }
-
-
-
 
   // this approache if user go to /sitemap.xml - under it generate xml page with list of sitemaps
   const sitemaps = await sitemapXmlService.fetchSitemaps();
