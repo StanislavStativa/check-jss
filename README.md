@@ -2,13 +2,13 @@
 
 A headless multi-site solution focused on XM Cloud content and site management capabilities. Includes easily customizable sample sites for select industries. The project is still under development, but we expect to release the first version soon.
 
-![PLAY! Website Home Page](docs/images/launchpad.JPG)
+![PLAY! Website Home Page](docs/images/launchpad.JPG) 
 
 This repository is a Sitecore DXP demo that is based on [sitecorelabs/xmcloud-foundation-head](https://github.com/sitecorelabs/xmcloud-foundation-head) repository and uses:
 
 - Sitecore XM Cloud
 - Sitecore JavaScript Services (JSS)
-- Next.js
+- Next.js 
 
 You can deploy the demo in just a few clicks at [Sitecore Demo Portal](https://portal.sitecoredemo.com/), or use one of the quick starts below to run it locally.
 
