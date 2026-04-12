@@ -8,7 +8,7 @@ This repository is a Sitecore DXP demo that is based on [sitecorelabs/xmcloud-fo
 
 - Sitecore XM Cloud
 - Sitecore JavaScript Services (JSS)
-- Next.js 
+- Next.js    
 
 You can deploy the demo in just a few clicks at [Sitecore Demo Portal](https://portal.sitecoredemo.com/), or use one of the quick starts below to run it locally.
 
