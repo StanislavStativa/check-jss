@@ -6,8 +6,7 @@ import config from 'temp/config';
 import { LayoutServicePageState } from '@sitecore-jss/sitecore-jss-nextjs';
 
 /**
- * The Bootstrap component is the entry point for performing any initialization logic
- * that needs to happen early in the application's lifecycle.
+ * The Bootstrap component is the entry point for performing any initialization logic that needs to happen early in the application's lifecycle.
  */
 const Bootstrap = (props: SitecorePageProps): JSX.Element | null => {
   // Browser ClientSDK init allows for page view events to be tracked
